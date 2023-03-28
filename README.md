@@ -14,9 +14,9 @@ sudo apt install curl build-essential git net-tools ssh
 
 ## 02 - Customize your shell and prompt : Fish shell
 
-### update and upgrade
 
 ```bash
+# update and upgrade
 sudo apt update
 
 # Download the key from the keyserver (using fish PUBKEY from https://launchpad.net/~fish-shell/+archive/ubuntu/release-3)
