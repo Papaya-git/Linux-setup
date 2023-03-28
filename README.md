@@ -30,6 +30,12 @@ sudo apt-get update
 
 sudo apt-get install fish
 
+# Install Oh My Fish!
+curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
+
+# Customize your prompt using fisk theme
+omf install fisk
+
 # Set Fish shell as your default shell
 which fish
 
