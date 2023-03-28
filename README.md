@@ -1,24 +1,23 @@
+___
 # Linux-setup
 Overall linux setup for packages installation, conteneurisation and easier everyday experience
-________________________________________________________________________________________________
 
-# 01 - Security updates and useful tools
+## 01 - Security updates and useful tools
+___
 
-## update and upgrade
 
 ```bash
+# update and upgrade linux packages and distribution
 sudo apt update -y && sudo apt upgrade -y
-```
 
-## Install useful tool packages
-
-```bash
+# Install useful tool packages
 sudo apt install curl build-essential git net-tools ssh
 ```
 
-# 02 - Customize your shell and prompt : Fish shell
+## 02 - Customize your shell and prompt : Fish shell
+___
 
-## update and upgrade
+### update and upgrade
 
 ```bash
 sudo apt update
@@ -40,7 +39,8 @@ which fish
 chsh -s /usr/bin/fish
 ```
 
-# 03 - Setup your Docker environment
+## 03 - Setup your Docker environment
+___
 
 ```bash
 # Remove older versions of Docker if installed
