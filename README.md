@@ -59,7 +59,6 @@ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/fish.gpg] https://ppa.launch
 
 # Update the apt package index and install Fish
 sudo apt-get update
-
 sudo apt-get install fish
 
 # Install Oh My Fish!
@@ -70,7 +69,6 @@ omf install fisk
 
 # Set Fish shell as your default shell
 which fish
-
 chsh -s /usr/bin/fish
 ```
 
@@ -85,8 +83,9 @@ cd /etc/systemd/system
 sudo touch autoupdate.timer autoupdate.service autoupdate.sh
 ```
 
-autoupdate.service
-```bash autoupdate.service
+```bash
+# file `autoupdate.service`
+
 [Unit]
 Description=Autoupdate everyday with apt
 
@@ -97,8 +96,9 @@ ExecStart=/etc/systemd/system/autoupdate.sh
 WantedBy=multi-user.target
 ```
 
-autoupdate.timer
 ```bash
+# file `autoupdate.timer`
+
 [Unit]
 Description=autoupdate linux with apt
 
@@ -111,8 +111,9 @@ Unit=autoupdate.service
 WantedBy=multi-user.target
 ```
 
-autoupdate.sh
 ```bash
+# file `autoupdate.sh`
+
 #!/bin/bash
 
 apt update -y && apt upgrade -y
@@ -143,8 +144,7 @@ showmount -e 192.168.1.130
 
 fstab
 ```bash fstab
-/swap.img       none    swap    sw      0       0
-192.168.1.3:/mnt/mediastorage   /mnt/mediastorage       nfs     defaults        0       0
+192.168.1.3:/mnt/mediastorage /mnt/mediastorage nfs     defaults 0 0
 192.168.1.130:/export/data /mnt/NAS nfs defaults 0 0
 ```
 
@@ -164,7 +164,6 @@ sudo apt-get remove docker docker-engine docker.io containerd runc
 
 # Update the apt package index and install packages to allow apt to use a repository over HTTPS
 sudo apt-get update
-
 sudo apt-get install \
     ca-certificates \
     curl \
@@ -172,7 +171,6 @@ sudo apt-get install \
 
 # Add Docker’s official GPG key
 sudo mkdir -m 0755 -p /etc/apt/keyrings
-
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 # Use the following command to set up the repository
