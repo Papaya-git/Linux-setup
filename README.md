@@ -84,7 +84,7 @@ sudo touch autoupdate.timer autoupdate.service autoupdate.sh
 ```
 
 ```bash
-# file `autoupdate.service`
+`autoupdate.service`
 
 [Unit]
 Description=Autoupdate everyday with apt
@@ -97,7 +97,7 @@ WantedBy=multi-user.target
 ```
 
 ```bash
-# file `autoupdate.timer`
+`autoupdate.timer`
 
 [Unit]
 Description=autoupdate linux with apt
@@ -112,10 +112,9 @@ WantedBy=multi-user.target
 ```
 
 ```bash
-# file `autoupdate.sh`
+`autoupdate.sh`
 
 #!/bin/bash
-
 apt update -y && apt upgrade -y
 apt autoremove
 reboot
