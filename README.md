@@ -141,9 +141,10 @@ sudo vim /etc/fstab
 showmount -e 192.168.1.130
 ```
 
-fstab
-```bash fstab
-192.168.1.3:/mnt/mediastorage /mnt/mediastorage nfs     defaults 0 0
+```bash
+`/etc/fstab`
+
+192.168.1.3:/mnt/mediastorage /mnt/mediastorage nfs defaults 0 0
 192.168.1.130:/export/data /mnt/NAS nfs defaults 0 0
 ```
 
